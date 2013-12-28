@@ -1,0 +1,6 @@
+[submodule "middleclass"]
+	path = middleclass
+	url = https://github.com/kikito/middleclass.git
+[submodule "Moses"]
+	path = Moses
+	url = git://github.com/Yonaba/Moses.git
