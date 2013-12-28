@@ -31,31 +31,33 @@ function love.draw()
   love.graphics.print("Roll: " .. roll, 10, 10)
 end
 
+-- Map
+
+function loadMap()
+
+end
+
+function drawMap()
+
+end
+
 -- Text
 
 function loadText()
   love.graphics.setNewFont(45)
 end
 
--- Map
-
-function loadMap()
-end
-
-function drawMap()
-end
-
 -- FPS
 
 function loadFPS()
-  fps_history = {60,60,60,60,60,60,60,60,60,60}
+  fps_history = {60,60,60,60,60}
   fps = 60
 end
 
 function updateFPS()
   _.pop(fps_history)
   _.push(fps_history, love.timer.getFPS())
-  fps = math.floor( _.reduce(fps_history, function (acc,x) return (acc+x) end) / #(fps_history) )
+  fps = math.floor( _.reduce(fps_history, function (acc,x) return (acc+x) end) / #(fps_history) + .5)
 end
 
 function drawFPS()
