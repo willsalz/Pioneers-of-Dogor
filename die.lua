@@ -1,7 +1,6 @@
 local Die = class('Die') -- 'Die' is the class' name
 
 function Die:initialize()
-    love.math.setRandomSeed(os.time()) 
 end
 
 Die.static.roll_min = 1 -- class variable (also admits methods)
